@@ -29,6 +29,15 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    };
+    ENV.authmaker = {
+      domainUrl: "https://super-rentals.authmaker.com",
+      redirectUri: "http://localhost:4200/login",
+      clientId: "7e27d256569a8d7281ee2188a42c5d9321a2b46c"
+    };
+
   }
 
   if (environment === 'test') {
@@ -47,8 +56,8 @@ module.exports = function(environment) {
     // use mirage in production too since the app will break
     // if there is no API for Ember Data
     ENV['ember-cli-mirage'] = {
-      enabled: true
-    }
+      enabled: false
+    };
   }
 
   return ENV;

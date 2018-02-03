@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   title: DS.attr(),
-  owner: DS.attr(),
+  owner: DS.belongsTo('user'),
   city: DS.attr(),
   category: DS.attr(),
   image: DS.attr(),

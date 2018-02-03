@@ -12,10 +12,24 @@
       {{#link-to 'contact'}}
         Contact
       {{/link-to}}
+      {{#if session.isAuthenticated}}
+        {{#link-to 'create'}}
+          Create Rental
+        {{/link-to}}
+        {{#link-to 'edit'}}
+          Edit My Rentals
+        {{/link-to}}
+      {{/if}}
+    </div>
+    <div class="login">
+      {{#if session.isAuthenticated}}
+        <button {{action 'logout'}}>Logout</button>
+      {{else}}
+        <button {{action 'login'}}>Login</button>
+      {{/if}}
     </div>
   </div>
   <div class="body">
     {{outlet}}
   </div>
 </div>
-

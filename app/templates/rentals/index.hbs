@@ -4,6 +4,8 @@
   <ul class="results">
     {{#each filteredResults as |rentalUnit|}}
       <li>{{rental-listing rental=rentalUnit}}</li>
+    {{else}}
+      <li class="alert">No rentals found.</li>
     {{/each}}
   </ul>
 {{/list-filter}}
