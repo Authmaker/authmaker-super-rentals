@@ -5,7 +5,7 @@
   </a>
   <h3>{{link-to rental.title "rentals.show" rental}}</h3>
   <div class="detail owner">
-    <span>Owner:</span> {{rental.owner}}
+    <span>Owner:</span> {{rental.owner.displayName}}
   </div>
   <div class="detail type">
     <span>Type:</span> {{rental-property-type rental.category}} - {{rental.category}}
